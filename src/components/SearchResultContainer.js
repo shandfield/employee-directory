@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import SearchForm from "./SearchForm";
-import ResultList from "./ResultList";
+import EmployeeCard from "./EmployeeCard";
 import API from "../utils/API";
 import "../styles/Result.css"
+import ResultList from "./ResultList"
 
 
 class SearchResultContainer extends Component {
   state = {
     result: [],
     filter: "",
-    filterBy: "lastName",
+    filterBy: "firstName",
     currentSort: "default",
     sortField: ""
   };
@@ -35,17 +36,17 @@ class SearchResultContainer extends Component {
     .catch(err => console.log(err));
   }
 //making the ability to allow the user to filter the employees
-  filerEmployees = (searchKey) => {
+  filterEmployees = (searchKey) => {
     console.log(searchKey);
     console.log(this.state.result);
     //by using this.state.result is will render the values of what is being searched
-    let filterResult = this.state.result.filter(person => person.firstName === searchKey)
+    var filterResult = this.state.result.filter(person => person.firstName === searchKey)
     
     this.setState({
         result: filterResult
     })
 }
-
+//when the form is submitted it is searching the API for what was typed
   handleFormSubmit = event => {
       event.preventDefault();
     const name = event.target.name;
@@ -54,11 +55,12 @@ class SearchResultContainer extends Component {
     console.log(name);
 
     //need to add filter function here
-    this.filerEmployees(value);
+    this.filterEmployees(value);
     this.setState({
       [name]: value
     });
-    this.filerEmployees(value);
+    //calling/using filterEmployees function
+    this.filterEmployees(value);
     this.filterEmployees(this.state.search);
   };
 
@@ -67,7 +69,6 @@ handleInputChange = event => {
     console.log(event);
     const value = event.target.value;
     const name = event.target.name;
-    console.log("**********");
     console.log(value);
     console.log(name);
     
@@ -95,16 +96,19 @@ handleInputChange = event => {
                      />
                 </div>
               </div>
-            <div className="row">
+
+        <div className="row">
           <table className="table">
-            <tr>
-              <th scope="col">Photo</th>
-              <th>First Name</th>
-              <th scope="col">Last Name </th>
-              <th scope="col">Email</th>
-              <th scope="col">Phone</th>
-            </tr>
-            {[...this.state.result].map((item) =>
+            <tbody>
+              <tr>
+                <th scope="col">Photo</th>
+                <th scope= "col">First Name</th>
+                <th scope="col">Last Name </th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+              </tr>
+            
+        {[...this.state.result].map((item) =>
               <EmployeeCard
                 picture={item.picture}
                 firstName={item.firstName}
@@ -114,12 +118,14 @@ handleInputChange = event => {
                 key={item.key}
               />
             )}
-
-          </table>
-        </div>
-    </div>
+          </tbody>
+             
+        </table>
+      </div>
+  </div>
     );
-  }
-}
+  };
+};
+      
 
 export default SearchResultContainer;
