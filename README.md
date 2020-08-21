@@ -1,16 +1,16 @@
 # Employee-Directory
 ![Employee-Directory Demo](https://i.imgur.com/EH7C8MB.gif)
-##Description: 
+##Description##: 
 This is a project that utilizes REACT to allow a User to view their entire employee directory, in this case I used a API from Random User Generator;randomuser.me. Also allowing the user to search for employees via their name. 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Please see additional information at the botton in section "additional information". 
 
-#**Link to Heroku**:
+#**Link to Heroku**#:
 
-#**Link to Github**: https://github.com/shandfield/employee-directory
+#**Link to Github**#: https://github.com/shandfield/employee-directory
 
-#**Link to full Demo Video**: https://drive.google.com/file/d/1CJjfJg7GbSiGmevakzvf74zzI42GYwN-/view
+#**Link to full Demo Video**#: https://drive.google.com/file/d/1CJjfJg7GbSiGmevakzvf74zzI42GYwN-/view
 
-##**Install**: 
+##**Install**##: 
 Please see additional Information for the npm commands if you would like to run via the terminal, otherwise just click on the heroku link!
 
 ##**Usage**: 
