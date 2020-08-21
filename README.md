@@ -1,26 +1,33 @@
 # Employee-Directory
 ![Employee-Directory Demo](https://i.imgur.com/EH7C8MB.gif)
-Description: This is a project that utilizes REACT to allow a User to view their entire employee directory, in this case I used a API from Random User Generator;randomuser.me. Also allowing the user to search for employees via their name. 
+##Description: 
+This is a project that utilizes REACT to allow a User to view their entire employee directory, in this case I used a API from Random User Generator;randomuser.me. Also allowing the user to search for employees via their name. 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Please see additional information at the botton in section "additional information". 
 
-Link to Heroku:
+#**Link to Heroku**:
 
-Link to Github: https://github.com/shandfield/employee-directory
+#**Link to Github**: https://github.com/shandfield/employee-directory
 
-Link to full Demo Video: https://drive.google.com/file/d/1CJjfJg7GbSiGmevakzvf74zzI42GYwN-/view
+#**Link to full Demo Video**: https://drive.google.com/file/d/1CJjfJg7GbSiGmevakzvf74zzI42GYwN-/view
 
-Install: Please see additional Information for the npm commands if you would like to run via the terminal, otherwise just click on the heroku link!
+##**Install**: 
+Please see additional Information for the npm commands if you would like to run via the terminal, otherwise just click on the heroku link!
 
-Usage: For school at this time. 
+##**Usage**: 
+For school at this time. 
 
-Contribution:${answers.contribution} 
+##**Contribution**:
+${answers.contribution} 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
-Tests: It is installed on this project, and further work on this project will include the test data. 
+##**Tests**: 
+It is installed on this project, and further work on this project will include the test data. 
 
-Questions: If you have any questions please reach out to me via my GitHub, https://github.com/shandfield.
+##**Questions**: 
+If you have any questions please reach out to me via my GitHub, https://github.com/shandfield.
 
-License: MIT License
+##**License**: 
+MIT License
 
 Copyright (c) 2020 Shelby 
 
@@ -43,7 +50,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-Additional Information regarding React: 
+##**Additional Information regarding React**: 
 ## Available Scripts
 
 In the project directory, you can run:
