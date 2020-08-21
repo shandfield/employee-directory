@@ -3,7 +3,7 @@ import SearchForm from "./SearchForm";
 import EmployeeCard from "./EmployeeCard";
 import API from "../utils/API";
 import "../styles/Result.css"
-import ResultList from "./ResultList"
+
 
 
 class SearchResultContainer extends Component {
