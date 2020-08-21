@@ -1,3 +1,6 @@
+#employee-directory
+
+Description: This is a project that utilizes REACT to allow a User to view their entire employee directory, in this case I used a API from Random User Generator;randomuser.me. Also allowing the user to search for employees via their name. 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Please see additional information at the botton in section "additional information". 
 
 ![Employee-Directory Demo]https://i.imgur.com/EH7C8MB.gif
