@@ -6,12 +6,14 @@ import "../styles/Result.css"
 
 
 
+
+
 class SearchResultContainer extends Component {
   state = {
     result: [],
     filter: "",
-    filterBy: "firstName",
-    currentSort: "default",
+    filterBy: [{}],
+    currentSort: "descend",
     sortField: ""
   };
 
@@ -28,7 +30,6 @@ class SearchResultContainer extends Component {
             picture: e.picture.large,
             email: e.email,
             phone: e.phone,
-            dob: e.age,
             key: i
           }))
         })
@@ -49,6 +50,16 @@ class SearchResultContainer extends Component {
 //when the form is submitted it is searching the API for what was typed
   handleFormSubmit = event => {
       event.preventDefault();
+      // const filter = event.target.value;
+      // const filterList = this.state.users.filter(item => {
+      //   let values = Object.values(item)
+      //   .join("")
+      //   .toLowerCase();
+      //   console.log(values);
+      //   return values.indexOf(filter.toLowerCase)!== -1
+      // });
+      // this.setState({filterBy:filterList});
+      //*
     const name = event.target.name;
     const value = event.target.value;
     console.log(value);
@@ -59,7 +70,7 @@ class SearchResultContainer extends Component {
     this.setState({
       [name]: value
     });
-    //calling/using filterEmployees function
+    // //calling/using filterEmployees function
     this.filterEmployees(value);
     this.filterEmployees(this.state.search);
   };
@@ -69,14 +80,47 @@ handleInputChange = event => {
     console.log(event);
     const value = event.target.value;
     const name = event.target.name;
-    console.log(value);
-    console.log(name);
+    //console.log(value);
+   // console.log(name);
     
     this.setState({
 
       [name]: value
 
     });
+  };
+
+handleSortChange = name => {
+  if (this.state.currentSort === "descend"){
+    this.setState({order: "ascend"})
+  } else {this.setState({order: "descend"})
+  }
+  // a and d ascend and descend
+  const compare= (a,d) => {
+    if(this.state.currentSort === "ascend"){
+      if (a[name] === undefined){
+        return 1
+      } else if(d[name] === undefined){
+        return -1
+      } else if(name === "name"){
+        return a[name].first.localeCompare(d[name].first)
+      }else{
+        return a[name]-d[name]
+      }
+    } else {
+        if(a[name] === undefined){
+          return 1
+        }else if (d[name] === undefined){
+          return -1
+        }else if (name === "name"){
+          return d[name].first.localeCompare(a[name].first)
+        } else{
+          return d[name]-a[name]
+        }
+    }
+  }
+  const Users = this.state.filterBy.sort(compare);
+  this.setState({filterBy: Users});
 };
 
   render() {
