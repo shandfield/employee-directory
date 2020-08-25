@@ -1,5 +1,5 @@
 # Employee-Directory
-![Employee-Directory Demo](https://i.imgur.com/EH7C8MB.gif) *change this once code is fixed and do a better one
+![Employee-Directory Demo](https://i.imgur.com/Ii9AqvH.gif) 
 
 ## **Description**: 
 This is a project that utilizes REACT to allow a User to view their entire employee directory, in this case I used a API from Random User Generator;randomuser.me. Also allowing the user to search for employees via their name. 
@@ -18,7 +18,6 @@ Please see additional Information for the npm commands if you would like to run 
 For school at this time. 
 
 ## **Contribution**:
-${answers.contribution} 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
 ## **Tests**: 
