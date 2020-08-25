@@ -1,8 +1,7 @@
 import React from "react";
 import SearchForm from "./SearchForm.js";
-
 import "../styles/navbar.css";
-import SearchForm from "./SearchForm";
+
 
 function Navbar() {
   return (
