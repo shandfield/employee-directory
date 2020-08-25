@@ -3,6 +3,7 @@ import SearchForm from "./SearchForm";
 import EmployeeCard from "./EmployeeCard";
 import API from "../utils/API";
 import "../styles/Result.css"
+import DataTable from "./DataTable";
 
 
 
@@ -15,8 +16,14 @@ class SearchResultContainer extends Component {
     filterBy: [{}],
     currentSort: "descend",
     sortField: ""
-  };
-
+    };
+    headings = [
+      { name: "Image", width: "20%" },
+      { name: "Name", width: "40%" },
+      { name: "Phone", width: "40%" },
+      { name: "Email", width: "30%" },
+      { name: "DOB", width: "30%" }
+    ]
   // When this component mounts, search the employee API for list of employees
   componentDidMount() {
     
@@ -25,11 +32,12 @@ class SearchResultContainer extends Component {
         console.log(res)
         this.setState({
           result: res.data.results.map((e, i) => ({
+            picture: e.picture.medium,
             firstName: e.name.first,
             lastName: e.name.last,
-            picture: e.picture.large,
-            email: e.email,
             phone: e.phone,
+            email: e.email,
+            dob: e.dob.date,
             key: i
           }))
         })
@@ -50,22 +58,12 @@ class SearchResultContainer extends Component {
 //when the form is submitted it is searching the API for what was typed
   handleFormSubmit = event => {
       event.preventDefault();
-      // const filter = event.target.value;
-      // const filterList = this.state.users.filter(item => {
-      //   let values = Object.values(item)
-      //   .join("")
-      //   .toLowerCase();
-      //   console.log(values);
-      //   return values.indexOf(filter.toLowerCase)!== -1
-      // });
-      // this.setState({filterBy:filterList});
-      //*
+     
     const name = event.target.name;
     const value = event.target.value;
     console.log(value);
     console.log(name);
 
-    //need to add filter function here
     this.filterEmployees(value);
     this.setState({
       [name]: value
@@ -143,14 +141,22 @@ handleSortChange = name => {
 
         <div className="row">
           <table className="table">
+          <DataTable
+                  headings = {this.headings}
+                  handleSort = {this.handleSortChange}
+                />
             <tbody>
-              <tr>
-                <th scope="col">Photo</th>
+              {/* <tr> */}
+                {/* <DataTable
+                  headings = {this.headings}
+                  handleSort = {this.handleSortChange}
+                /> */}
+                {/* <th scope="col">Photo</th>
                 <th scope= "col">First Name</th>
                 <th scope="col">Last Name </th>
                 <th scope="col">Email</th>
-                <th scope="col">Phone</th>
-              </tr>
+                <th scope="col">Phone</th> */}
+              {/* </tr> */}
             
         {[...this.state.result].map((item) =>
               <EmployeeCard
@@ -159,6 +165,7 @@ handleSortChange = name => {
                 lastName={item.lastName}
                 email={item.email}
                 phone={item.phone}
+                dob = {item.dob}
                 key={item.key}
               />
             )}

@@ -7,19 +7,21 @@ function ResultList(props) {
       <thead>
         <tr>
           <th></th>
-          <th OnClick = {props.sortByName}>Name</th>
+          <th OnClick = {props.name}>Name</th>
           <th>Email</th>
           <th>Phone</th>
+          <th>DOB</th>
          </tr>
       </thead>
 
       <tbody className = "">
       {props.results.map(result => (
         <tr className= "table">
-          <td><img className= "" src= {result.picture.medium} alt= "" /></td>
-          <td>{result.name.first + " " + result.name.last}</td>
-          <td className="email"><a href={result.email}>{result.email}</a></td>
-          <td className="phone"><a href={result.phone}>{result.phone}</a></td>
+          <td><img className= "img-responsive" src= {result.picture.medium} alt= "" /></td>
+          <td className= "align-middle">{result.name.first + " " + result.name.last}</td>
+          <td className=" align-middle"><a href={result.email}>{result.email}</a></td>
+          <td className=" align-middle"><a href={result.phone}>{result.phone}</a></td>
+          <td className=" align-middle"><a href={result.dob.date}>{result.dob.date}</a></td>
         </tr>
       ))}
       </tbody>

@@ -3,7 +3,7 @@ import React from "react";
 
 function SearchForm(props) {
   return (
-      <form>
+      <>
         <div className="searchbox">
         <input
             onChange={props.handleInputChange}
@@ -18,7 +18,7 @@ function SearchForm(props) {
           Search
         </button>
       </div>
-    </form>
+    </>
   );
   
 };

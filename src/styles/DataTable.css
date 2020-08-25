@@ -1,0 +1,16 @@
+  
+.col {
+  cursor: pointer;
+}
+
+.col .pointer:after {
+  font-size: 80%;
+  content: "";
+  margin-right: 18px;
+}
+
+.col .pointer:hover:after {
+  font-size: 80%;
+  content: "🔻";
+  margin-right: 0;
+}
