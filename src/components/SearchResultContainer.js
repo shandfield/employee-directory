@@ -5,10 +5,6 @@ import API from "../utils/API";
 import "../styles/Result.css"
 import DataTable from "./DataTable";
 
-
-
-
-
 class SearchResultContainer extends Component {
   state = {
     result: [],
