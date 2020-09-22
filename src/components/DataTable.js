@@ -2,10 +2,8 @@ import React from "react";
 
 import "../styles/DataTable.css";
 
-
 const DataTable = ({headings, handleSort}) => {
   
-
   return (
 <>
   <thead>
