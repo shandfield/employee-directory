@@ -11,7 +11,7 @@ https://shandfield-employee-directory.herokuapp.com/
 ### Github link:
 https://github.com/shandfield/employee-directory
 
-**Link to full Demo Video**#: https://drive.google.com/file/d/1CJjfJg7GbSiGmevakzvf74zzI42GYwN-/view
+**Link to full Demo Video**: https://drive.google.com/file/d/1CJjfJg7GbSiGmevakzvf74zzI42GYwN-/view
 
 ## Table of contents
 * [General info](#general-info)
