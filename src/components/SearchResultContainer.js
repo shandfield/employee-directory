@@ -154,15 +154,15 @@ handleSortChange = name => {
                 <th scope="col">Phone</th> */}
               {/* </tr> */}
             
-        {[...this.state.result].map((item) =>
+        {[...this.state.result].map((props) =>
               <EmployeeCard
-                picture={item.picture}
-                firstName={item.firstName}
-                lastName={item.lastName}
-                email={item.email}
-                phone={item.phone}
-                dob = {item.dob}
-                key={item.key}
+                picture={props.picture}
+                firstName={props.firstName}
+                lastName={props.lastName}
+                email={props.email}
+                phone={props.phone}
+                dob = {props.dob}
+                key={props.key}
               />
             )}
           </tbody>
