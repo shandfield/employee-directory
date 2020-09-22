@@ -1,35 +1,48 @@
 # Employee-Directory
 ![Employee-Directory Demo](https://i.imgur.com/Ii9AqvH.gif) 
 
-## **Description**: 
-This is a project that utilizes REACT to allow a User to view their entire employee directory, in this case I used a API from Random User Generator;randomuser.me. Also allowing the user to search for employees via their name. 
+## Description:
+Project utilizies bootstrap, react, react-dom, axios, react-scrpits and an API for a random user generator. This was created in school to allow a user to search for their employees. 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Please see additional information at the botton in section "additional information". 
 
-**Link to Heroku**: https://still-citadel-37848.herokuapp.com/
+### Heroku deploy link:
+https://shandfield-employee-directory.herokuapp.com/
 
-**Link to Github**: https://github.com/shandfield/employee-directory
+### Github link:
+https://github.com/shandfield/employee-directory
 
 **Link to full Demo Video**#: https://drive.google.com/file/d/1CJjfJg7GbSiGmevakzvf74zzI42GYwN-/view
 
-## **Install**: 
-Please see additional Information for the npm commands if you would like to run via the terminal, otherwise just click on the heroku link!
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [License](#license)
+* [Contribution](#contribution)
+* [Inspiration](#inspiration)
+* [Status](#status)
 
-## **Usage**: 
-For school at this time. 
+## General info
+This project was created with Random User Generator API to create a list of employees that would allow the user to search for certain employees based on name. 
+	
+## Technologies
+Project is created with:
+* bootstrap: ^4.5.2
+* react: ^16.13.1
+* react-dom: ^16.13.1
+* axios: ^0.19.2
+* react-scripts: 3.4.3
 
-## **Contribution**:
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
+## Setup: 
+To run this program locally, fork/clone the repository, and in the terminal:
+```
+$ cd ../<nameoffile>
+$ npm install
+$ npm start
+```
+Or to run this program via Heroku, click on the link above. 
 
-## **Tests**: 
-It is installed on this project, and further work on this project will include the test data. 
-
-## **Questions**: 
-If you have any questions please reach out to me via my GitHub, https://github.com/shandfield.
-
-## **License**: 
-MIT License
-
-Copyright (c) 2020 Shelby 
+## License: Copyright (c) 2020 Shelby 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -49,6 +62,14 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+## Contribution:
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
+
+## Status: 
+I plan to continue to develop this project as I would like to add functionality to the toggle buttons.
+
+## Questions: 
+If you have any questions please reach out to me via my GitHub, https://github.com/shandfield.
 
 ## **Additional Information regarding React**: 
 ## Available Scripts
